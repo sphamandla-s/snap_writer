@@ -1,3 +1,4 @@
+import 'package:docs/screens/documents/new_document.dart';
 import 'package:flutter/material.dart';
 
 import 'myHomePage.dart';
@@ -27,6 +28,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: const MyHomePage(),
+      routes: {'/newdoc' : (context)=> const NewDocument()},
     );
   }
 }
