@@ -40,7 +40,8 @@ class _MyHomePageState extends State<MyHomePage> {
         currentIndex: _currentPageIndex,
         onTap: _selected,
       ),
-      body: pages[_currentPageIndex],
+      body: Padding(padding: const EdgeInsets.all(25.0),
+      child: pages[_currentPageIndex],),
     );
   }
 }

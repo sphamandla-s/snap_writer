@@ -2,7 +2,6 @@ import 'package:docs/repository/doc_pro_repository.dart';
 import 'package:flutter/cupertino.dart';
 
 class DocsProViewModel extends ChangeNotifier {
-
   final DocProRepository _docProRepository = DocProRepository();
 
   Future<List<Map<String, Object?>>> get getAllAllNotes =>
@@ -10,7 +9,11 @@ class DocsProViewModel extends ChangeNotifier {
 
   addNote(String id, String tittle, String note, DateTime createdOn) async {
     await _docProRepository.createDoc(
-        id, tittle, note, createdOn,);
+      id,
+      tittle,
+      note,
+      createdOn,
+    );
     notifyListeners();
   }
 
